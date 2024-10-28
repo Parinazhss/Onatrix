@@ -1,0 +1,14 @@
+﻿[
+  {
+    "outputFile": "wwwroot/scss/main.css",
+    "inputFile": "wwwroot/scss/main.scss"
+  },
+  {
+    "outputFile": "wwwroot/scss/colors/theme.css",
+    "inputFile": "wwwroot/scss/colors/theme.scss"
+  },
+  {
+    "outputFile": "wwwroot/scss/sections/_services.css",
+    "inputFile": "wwwroot/scss/sections/_services.scss"
+  }
+]

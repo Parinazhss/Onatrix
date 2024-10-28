@@ -1,0 +1,45 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+@{
+
+    Layout = "mainLayout.cshtml";
+    ViewBag.Title = Model?.Value("pageTitle") ?? null;
+
+
+
+    var backgroundImage = Model?.Value<IPublishedContent>("heroBackgroundImage")?.Url() ?? "";
+
+    var signatureImage = Model?.Value<IPublishedContent>("aboutSignatureImage")?.Url() ?? "";
+}
+
+<section class="showcase-success">
+          <img  src="@backgroundImage" alt="image of worker">
+          <div class="container">
+              <h1>@Model?.Value("heroHeadline")</h1>
+              <p>@Model?.Value("heroText")</p>
+              <a  href="@Model?.Value("heroButtonUrl")" class="btn-primary">@Model?.Value("heroButtonText")</a>
+          </div>
+</section>
+
+<section class="about-us">
+    <div class="container">
+        <div class="about-info-boxes">
+            <div class="about-info">
+                <h6>@Model?.Value("aboutSectionTitle")</h6>
+                <h4>@Model?.Value("aboutHeadline")</h4>
+                <p class="signature-write">@Model?.Value("aboutQuote")</p>
+                <p>@Model?.Value("aboutText")</p>
+                <img src="@signatureImage" alt=@Model?.Value("aboutSignature")>
+                     <p>@Model?.Value("aboutSignature")</p>
+            </div>
+            <div class="about-form">
+                <div class="form-header">
+                    <h3></h3>
+                </div>
+                <div class="about-form-text">
+                   
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
