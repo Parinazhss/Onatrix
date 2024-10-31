@@ -19,21 +19,7 @@
   }
 }
 
-/*
-a {
-    @include btn;
-    @include button-colors(var(--color-primary), var(--color-secondary), var(--color-accent), var(--color-primary))
-}
 
-button {
-    @include btn;
-    @include button-colors(var(--color-primary), var(--color-secondary), var(--color-accent), var(--color-primary))
-}
-
-.btn-primary {
-    @include btn;
-    @include button-colors(var(--color-primary), var(--color-secondary), var(--color-accent), var(--color-primary))
-} */
 @media (prefers-reduced-motion: no-preference) {
   :root {
     scroll-behavior: smooth;
@@ -315,7 +301,7 @@ header .header-menu .container .btn-menu {
   position: relative;
 }
 .showcase-success img {
-  position: relative;
+  position: absolute;
   width: 100%;
   height: auto;
   z-index: 0;
@@ -331,7 +317,7 @@ header .header-menu .container .btn-menu {
   z-index: 1;
 }
 .showcase-success .container h1 {
-  font-size: 40px;
+  font-size: 30px;
   margin-top: 20px;
 }
 @media (min-width: 1400px) {

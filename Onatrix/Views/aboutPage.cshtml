@@ -1,0 +1,26 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+@{
+	Layout = "mainLayout.cshtml";
+	ViewBag.Title = Model?.Value("pageTitle") ?? null;
+
+
+
+    var backgroundImgRight = Model?.Value<IPublishedContent>("backgroundImgRight")?.Url() ?? "";
+    var backgroundImgLeft = Model?.Value<IPublishedContent>("backgroundImgLeft")?.Url() ?? "";
+}
+
+<section class="about-hero">
+    <img class="img-1" src="@backgroundImgRight" alt="">
+    <img class="img-2" src="@backgroundImgLeft" alt="">
+    <div class="container">
+        <h2>@Model.Value("pageTitle")</h2>
+        <div class="breadcrumb">
+            <div class="hero-links">
+                <a class="breadcrumb-home" href="/home">@Model.Value("homeText")</a>
+                <i class="fa-solid fa-angle-right"></i>
+                <span><a class="breadcrumb-home" href="/about-us">@Model.Value("aboutText")</a></span>
+            </div>
+        </div>
+    </div>
+</section>
